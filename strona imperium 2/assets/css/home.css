@@ -1,0 +1,55 @@
+.admin-list .avatar {
+    animation-name: admAvatarAnimation;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes admAvatarAnimation {
+    0% {
+        transform: translateX(-500px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.admin-list {
+    display: flex;
+    margin-left: 30px;
+}
+
+.admin-list img {
+    width: 60px;
+    height: 60px;
+    margin-left: -25px;
+    background-color: black;
+}
+
+@keyframes cursor-blinking {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+#cursor::after {
+    content: "|";
+    animation: cursor-blinking 1.5s infinite steps(1);
+}
+
+#cursor {
+    margin-left: -6px
+}
+
+#cursor, #writing-text {
+    font-size: 24px;
+    font-weight: bold;
+}
